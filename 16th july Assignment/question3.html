@@ -1,0 +1,71 @@
+<!--
+Question 3:  
+Write a program to take marks as input from the user and grade him accordingly. 
+Use Conditional statements. Also the same code using switch or ternary
+input: 50 
+Output : Marks are 50 and grade is B 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("%c Using if-else if-else statements","color:green;");
+        function grade(persent)
+        {
+            if (persentage >= 75)
+            {
+                return "A";
+            }
+            else if (persentage > 70 && persentage < 75)
+            {
+                return "B";
+            }
+            else if (persentage >= 60 && persentage < 70)
+            {
+                return "C";
+            }
+            else if (persentage < 60 && persentage > 40)
+            {
+                return "D";
+            }
+            else
+            {
+                return "Fail"
+            }
+        }
+        let persentage = prompt("Please enter your persentage");
+        let student_grade = grade(persentage);
+        console.log("Persentage is "+persentage +" and grade is "+student_grade);
+//=====================================================================================
+        console.log("%c Using Ternary operator","color:green;");
+        let grd = (persentage >= 75) ? "A" :
+                  (persentage > 70 && persentage < 75) ? "B" : 
+                  (persentage >= 60 && persentage < 70) ? "C" :
+                  (persentage < 60 && persentage > 40) ? "D" : "Fail"
+
+        console.log("Persentage is "+persentage +" and grade is "+grd);
+//================================================================================
+        console.log('%c Using switch statement','color:green;');
+
+        switch(student_grade)
+        {
+            case 'A': console.log("Persentage is "+persentage +" and grade is A");
+                    break;
+            case 'B': console.log("Persentage is "+persentage +" and grade is B");
+                    break;
+            case 'C': console.log("Persentage is "+persentage +" and grade is C");
+                    break;
+            case 'D': console.log("Persentage is "+persentage +" and grade is D");
+                    break;
+            default :
+            console.log("Persentage is "+persentage +" and student got Fail in exam");
+        }
+    </script>
+</body>
+</html>
